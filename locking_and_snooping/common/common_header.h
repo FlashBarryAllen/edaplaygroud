@@ -45,6 +45,7 @@ using namespace std;
 
 #include <iomanip>
 #include <deque>
+#include <fstream>
 
 static ofstream fout("example.log");
 
