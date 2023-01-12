@@ -12,7 +12,7 @@ CXXFLAGS = -I$(IDIR)
 CXXFLAGS += -g -O0
 CXXFLAGS += -Iinclude
 CFLAGS += -Wall
-SCPATH = /usr/local/systemc-2.3.4
+SCPATH = /usr/local/systemc-2.3.3
 LIBS = -lm
 
 $(TARGET): $(OBJ)
