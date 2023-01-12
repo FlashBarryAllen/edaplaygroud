@@ -7,6 +7,7 @@ using namespace sc_dt;
 using namespace std;
 
 #include "tlm.h"
+#include <fstream>
 
 static ofstream fout("output.txt");
 
