@@ -66,7 +66,7 @@ using namespace std;
 #include "tlm_utils/tlm_quantumkeeper.h"
 
 #include "../common/gp_mm.h"
-
+#include <fstream>
 
 static ofstream fout("snooping.log");
 
