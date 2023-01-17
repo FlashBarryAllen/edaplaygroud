@@ -11,7 +11,7 @@ void Initiator::thread_process()
     {
 
       tlm::tlm_command cmd = static_cast<tlm::tlm_command>(rand() % 2);
-      if (cmd == tlm::TLM_WRITE_COMMAND) data = 0xFF000000 | i;
+      if (cmd == tlm::TLM_WRITE_COMMAND) data = 0xff000000 | i;
 
       // Initialize 8 out of the 10 attributes, byte_enable_length and extensions being unused
       trans->set_command( cmd );
@@ -29,8 +29,8 @@ void Initiator::thread_process()
       if ( trans->is_response_error() )
         SC_REPORT_ERROR("TLM-2", "Response error from b_transport");
 
-      cout << "trans = { " << (cmd ? 'W' : 'R') << ", " << hex << i
-           << " } , data = " << hex << data << " at time " << sc_time_stamp()
+      cout << "trans = { " << (cmd ? 'W' : 'R') << ", 0x" << hex << i
+           << " } , data = 0x" << hex << data << " at time " << sc_time_stamp()
            << " delay = " << delay << endl;
 
       // Realize the delay annotated onto the transport call
